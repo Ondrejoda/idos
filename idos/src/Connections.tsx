@@ -5,6 +5,9 @@ function calculateDepartureTime(departure: string): string {
   const now = new Date();
   const [hours, minutes] = departure.split(':');
   const departureTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), parseInt(hours), parseInt(minutes));
+  if (departureTime.getTime() < now.getTime()) {
+    departureTime.setDate(departureTime.getDate() + 1);
+  }
   const timeDifference = departureTime.getTime() - now.getTime();
   const minutesDifference = Math.floor(timeDifference / (1000 * 60));
 
@@ -17,7 +20,9 @@ function calculateDepartureTime(departure: string): string {
   } else {
     const hours = Math.floor(minutesDifference / 60);
     const minutes = minutesDifference % 60;
-    if (minutes == 1) {
+    if (minutes == 0) {
+      return `in ${hours} hours`;
+    } else if (minutes == 1) {
       return `in ${hours} hours 1 minute`;
     } else {
       return `in ${hours} hours ${minutes} minutes`;

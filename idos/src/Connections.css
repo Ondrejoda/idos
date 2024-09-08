@@ -8,9 +8,10 @@
 }
 
 .connections--subtitle {
-  color: #353535.0
-  .;
+  margin: -1rem 0 -0.75rem;
+  color: #505050;
   font-size: 0.75rem;
+  border-bottom: 1px solid#404040;
 }
 
 .connection {
@@ -18,10 +19,6 @@
   flex-direction: column;
   flex-grow: 1;
   border-bottom: 1px solid #343434;
-}
-
-h2 {
-  border-bottom: 1px solid#404040;
 }
 
 .connection--body {
