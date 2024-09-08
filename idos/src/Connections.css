@@ -7,6 +7,12 @@
   border-radius: 2rem;
 }
 
+.connections--subtitle {
+  color: #353535.0
+  .;
+  font-size: 0.75rem;
+}
+
 .connection {
   display: flex;
   flex-direction: column;

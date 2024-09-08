@@ -33,7 +33,7 @@ function Connections({url}) {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://109.199.111.206/get-routes/" + url);
+        const response = await fetch("http://109.199.111.206:81/get-routes/" + url);
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
@@ -45,10 +45,11 @@ function Connections({url}) {
   return (
     <div className='connections'>
       {data.length > 0 ? (
-        <h2 className='connections--title'>from {destination.from} to {destination.to}</h2>
+        <h2 className='connections--title'>{destination.from} to {destination.to}</h2>
       ) : (
         <h2 className='connections--title'>Loading...</h2>
       )}
+      <p className='connections--subtitle'>{url}</p>
       {data.map((item, index) => (
         <div className='connection' key={index}>
           <h3 className='connection--title'>{item.name}</h3>
