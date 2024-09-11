@@ -38,7 +38,7 @@ function Connections({url}) {
   useEffect(() => {
     (async () => {
       try {
-        const response = await fetch("http://ondrejoda.com/get-routes/" + url);
+        const response = await fetch("http://ondrejoda.com/api/routes/" + url);
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
