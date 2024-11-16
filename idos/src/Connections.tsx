@@ -88,4 +88,4 @@ function Connections(props: ConnectionsProps) {
   );
 };
 
-export default Connections
+export default Connections;
