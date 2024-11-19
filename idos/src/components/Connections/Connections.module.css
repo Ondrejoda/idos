@@ -1,0 +1,19 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #303030;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.title {
+  
+}
+
+.subtitle {
+  margin: -1rem 0 -0.75rem;
+  color: #505050;
+  font-size: 0.75rem;
+  border-bottom: 1px solid#404040;
+}
